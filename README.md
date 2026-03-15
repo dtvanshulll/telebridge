@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TeleBridge
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
@@ -209,3 +210,7 @@ async def forward_last(ctx):
 ## License
 
 Released under the MIT License. See [`LICENSE`](LICENSE).
+=======
+# telebridge
+TeleBridge is a powerful Telegram automation framework combining Bot API and Userbot capabilities to build bots, channel automation tools, media downloaders, message forwarders, and Telegram utilities.
+>>>>>>> 7a48e8cec5631005cdb3aa8f66f27aaec256b10b
