@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61,<77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telebridge"
+version = "0.1.0"
+description = "Unified Telegram Bot and Userbot automation framework"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "TeleBridge Developers" }
+]
+keywords = ["telegram", "bot", "userbot", "telethon", "aiogram", "automation"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Framework :: AsyncIO",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+  "telethon>=1.30",
+  "aiogram>=3.0",
+  "python-dotenv",
+]
+
+[project.urls]
+Homepage = "https://github.com/dtvanshull/telebridge"
+Repository = "https://github.com/dtvanshull/telebridge"
+Documentation = "https://github.com/dtvanshull/telebridge"
+Issues = "https://github.com/dtvanshull/telebridge/issues"
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.2",
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.0",
+  "tomli>=2.0.1; python_version < '3.11'",
+  "twine>=5.1.1",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["telebridge", "telebridge.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
